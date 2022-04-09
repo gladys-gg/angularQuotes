@@ -21,10 +21,13 @@ export class QuotelistComponent implements OnInit {
       this.quote[index].showDescription = !this.quote[index].showDescription;
     }
 
-    completeQuote(isComplete:boolean, index : number){
+    deleteQuote(isComplete:boolean, index : number){
       console.log('from child to parent', isComplete)
       if(isComplete){
+        let todelete =confirm('Are you sure you want to delete this quote?')
+        if(todelete){
         this.quote.splice(index,1)
+        }
   
       }
     }
