@@ -31,6 +31,19 @@ export class QuotelistComponent implements OnInit {
   
       }
     }
+
+    addQuote(quote:any){
+      let arraysize = this.quote.length;
+      quote.id =arraysize+1;
+      quote.completeDate =new Date(quote.completeDate)
+      this.quote.push(quote)
+
+    }
+
+    displayInfo(index:any){
+      this.quote[index].showDescription =!this.quote[index].showDescription
+    }
+
   constructor() { }
 
   ngOnInit(): void {
