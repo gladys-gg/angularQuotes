@@ -12,7 +12,7 @@ import { Quotes } from 'src/app/models/quotes';
 export class QuotelistComponent implements OnInit {
 
     quote: Quotes [] =[
-      new Quotes('gladys','work hard and success and success will follow you')
+      new Quotes('gladys','work hard and success and success will follow you',new Date(2022,4,12))
      
     ];
 

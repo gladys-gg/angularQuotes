@@ -5,7 +5,7 @@ export class Quotes {
 
     showDescription:boolean;
 
-    constructor( public author:string, public description:string){
+    constructor( public author:string, public description:string, public completeDate:Date){
     
     this.showDescription=false;
     this.upvotes =0;

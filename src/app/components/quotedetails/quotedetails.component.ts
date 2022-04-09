@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { OutgoingMessage } from 'http';
 import { Quotes } from 'src/app/models/quotes';
 
 @Component({
@@ -18,9 +17,12 @@ export class QuotedetailsComponent implements OnInit {
     this.isComplete.emit(complete)
   }
  
-
-  upvotes=0;
-  downvotes=0;
+  upvotes (){
+    this.quote
+  }
+  downvotes (){
+    this.quote
+  }
 
 
   ngOnInit(): void {

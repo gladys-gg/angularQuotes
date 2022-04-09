@@ -1,4 +1,9 @@
+<p>{{quote.author}}</p>
 <p>{{quote.description}}</p>
-
+<p>
+    Date {{quote.completeDate|date}}
+   </p>
 <button (click)="completeQuote(true)">Delete</button>
+<button (click)="upvotes()">Thumbs Up</button>
+<button (click)="downvotes()">Thumbs Down</button>
 
