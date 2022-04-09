@@ -9,12 +9,12 @@ import { Quotes } from 'src/app/models/quotes';
 })
 export class FormComponent implements OnInit {
 
-  quoty = new Quotes('','',new Date() )
+  quoty = new Quotes(0,'','',new Date(),0,0 )
   @Output () add = new EventEmitter<Quotes> ();
 
   addNewQuote (){
     this.add.emit(this.quoty);
-    this.quoty = new Quotes('','',new Date());
+    this.quoty = new Quotes(0,'','',new Date(),0,0);
 
   }
 

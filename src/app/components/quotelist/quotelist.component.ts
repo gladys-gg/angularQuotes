@@ -12,8 +12,10 @@ import { Quotes } from 'src/app/models/quotes';
 export class QuotelistComponent implements OnInit {
 
     quote: Quotes [] =[
-      new Quotes('gladys','work hard and success and success will follow you',new Date(2022,4,12))
-     
+      new Quotes(0,'gladys','work hard and success and success will follow you',new Date(2022,4,12),0,0),
+      new Quotes(1,'gladys','work hard and success and success will follow you',new Date(2022,4,12),0,0),
+      new Quotes(2,'gladys','work hard and success and success will follow you',new Date(2022,4,12),0,0),
+      new Quotes(3,'gladys','work hard and success and success will follow you',new Date(2022,4,12),0,0)
     ];
 
     toggleDetails(index:number){
