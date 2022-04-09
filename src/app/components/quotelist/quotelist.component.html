@@ -1,1 +1,12 @@
 <p>quotelist works!</p>
+
+<ul *ngFor="let quote of quote; let i = index">
+   <li>{{quote.author}}</li>
+   <button (click)='toggleDetails(i)'>Show</button>
+
+   <div>
+       <app-quotedetails *ngIf="quote.showDescription"[quote]="quote"></app-quotedetails>
+      
+   </div>
+</ul>
+
