@@ -8,7 +8,6 @@ import { QuotedetailsComponent } from './components/quotedetails/quotedetails.co
 import { DateCountPipe } from './pipes/date-count.pipe';
 import { FormComponent } from './components/form/form.component';
 import { FormsModule } from '@angular/forms';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
@@ -18,7 +17,6 @@ import { HighlightDirective } from './highlight.directive';
     QuotedetailsComponent,
     DateCountPipe,
     FormComponent,
-    NavbarComponent,
     HighlightDirective
   ],
   imports: [
@@ -27,6 +25,6 @@ import { HighlightDirective } from './highlight.directive';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent, NavbarComponent]
+  bootstrap: [AppComponent,]
 })
 export class AppModule { }
