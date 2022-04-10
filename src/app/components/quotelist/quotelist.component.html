@@ -2,13 +2,13 @@
    <li><p>Quote by:<br>{{quote.author}}</p>
         <p>The quote:<br>{{quote.quote}}</p>
 
-   </li>
-   <button class="btn-primary" (click)='toggleDetails(i)'>Show More</button>
-
-   <div>
-       <app-quotedetails *ngIf="quote.showDescription"[quote]="quote" (isComplete) = 'deleteQuote($event,i)'></app-quotedetails>
-      
-   </div>
-   
+    </li>
+    <button class="btn-primary" (click)='toggleDetails(i)'>Show More</button>
+    <div>
+        <app-quotedetails *ngIf="quote.showDescription"[quote]="quote" (isComplete) = 'deleteQuote($event,i)'></app-quotedetails>
+       
+    </div>
 </ul>
-
+<div>
+    <app-form (add)='addQuote ($event)'></app-form>
+</div>

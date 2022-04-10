@@ -42,9 +42,30 @@ export class QuotelistComponent implements OnInit {
 
     }
 
-    displayInfo(index:any){
-      this.quote[index].showDescription =!this.quote[index].showDescription
+    upvotes(i:number) {
+      this.quote[i].upvotes ++;
     }
+
+    downvotes(i:number) {
+      this.quote[i].downvotes  ++;
+    }
+
+    firstNum!:number
+    lastNum!:number
+    counter!:number
+
+    highestUpvote(){
+      this.firstNum = 0
+      this.lastNum = 0
+  
+      for(this.counter=0 ; this.counter < this.quote.length; this.counter++) {
+        this.lastNum = this.quote[this.counter].upvotes;
+        if(this.lastNum > this.firstNum){this.firstNum = this.lastNum}
+      }
+      return  this.firstNum
+    }
+
+ 
 
   constructor() { }
 
