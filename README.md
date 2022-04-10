@@ -1,27 +1,27 @@
 # angularQuotes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+# Description
 
-## Development server
+An application that enables users to add quotes,delete quotes.You can also be able to see already existing and the author and can upvote and downvote quotes.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Technologies Used
 
-## Code scaffolding
+    Angular CLI
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Known Bugs
 
-## Build
+    There are no known bugs currently. The page works as expected.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Support and Contact Details
 
-## Running unit tests
+    For any comments,suggestions,feedback or inquiries, contact me via email: gladysmwangi04@yahoo.com
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    Make contributions to the code.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# License
 
-## Further help
+    This project is licensed under the MIT Open Source license Copyright (c) 2022. Gladys Mwangi
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
