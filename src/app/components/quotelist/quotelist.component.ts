@@ -18,6 +18,13 @@ export class QuotelistComponent implements OnInit {
       new Quotes(3,'gladys','work hard and success and success will follow you',new Date(2022,4,12),0,0)
     ];
 
+    get sortedQuoty(){
+      return this.quote.sort((a , b) =>{
+        return<any>new Date(b.completeDate)-<any>new Date(a.completeDate);
+      });
+
+    }
+
     toggleDetails(index:number){
 
       this.quote[index].showDescription = !this.quote[index].showDescription;

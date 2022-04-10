@@ -1,5 +1,8 @@
+<p>Upvotes: {{quote.upvotes}}</p>
+<p>Downvotes: {{quote.downvotes}}</p>
+
 <p>
-    Posted on: {{quote.completeDate|date}}
+    This quote was posted {{quote.completeDate|dateCount}} days ago
    </p>
 <button class="btn-success" (click)="deleteQuote(true)"><fa-icon [icon]="faTrashCan"></fa-icon></button>
 <button class="btn-primary " (click)="upvotes()"><fa-icon [icon]="faThumbsUp"></fa-icon></button>

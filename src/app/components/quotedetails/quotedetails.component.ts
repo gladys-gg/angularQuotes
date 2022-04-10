@@ -24,7 +24,7 @@ export class QuotedetailsComponent implements OnInit {
     this.quote
   }
   downvotes (){
-    this.quote
+    
   }
 
   faThumbsUp = faThumbsUp;
