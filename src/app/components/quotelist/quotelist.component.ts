@@ -12,10 +12,9 @@ import { Quotes } from 'src/app/models/quotes';
 export class QuotelistComponent implements OnInit {
 
     quote: Quotes [] =[
-      new Quotes(0,'gladys','work hard and success and success will follow you',new Date(2022,4,12),0,0),
-      new Quotes(1,'gladys','work hard and success and success will follow you',new Date(2022,4,12),0,0),
-      new Quotes(2,'gladys','work hard and success and success will follow you',new Date(2022,4,12),0,0),
-      new Quotes(3,'gladys','work hard and success and success will follow you',new Date(2022,4,12),0,0)
+      new Quotes(0,'Gabby',"In three words I can sum up everything I've learned about life: it goes on.",new Date(2022,4,1),0,0),
+      new Quotes(1,'Ryan',"Try to be a rainbow in someone's cloud.",new Date(2021,4,5),5,0),
+      new Quotes(2,'Reynard','Work hard and SMART and success will follow you',new Date(2020,4,12),3,0)
     ];
 
     get sortedQuoty(){
