@@ -9,6 +9,7 @@ import { DateCountPipe } from './pipes/date-count.pipe';
 import { FormComponent } from './components/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './highlight.directive';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -17,14 +18,18 @@ import { HighlightDirective } from './highlight.directive';
     QuotedetailsComponent,
     DateCountPipe,
     FormComponent,
-    HighlightDirective
+    HighlightDirective,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent,]
 })
-export class AppModule { }
+export class AppModule { 
+
+}

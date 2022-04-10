@@ -1,11 +1,9 @@
-<p>{{quote.author}}</p>
-<p>{{quote.description}}</p>
 <p>
-    Date {{quote.completeDate|date}}
+    Posted on: {{quote.completeDate|date}}
    </p>
-<button (click)="deleteQuote(true)">Delete</button>
-<button class="btn-primary" (click)="upvotes()">Thumbs Up<i class="fa fa-thumbs-up" ></i></button>
-<button class="btn-danger" (click)="downvotes()">Thumbs Down<i class="fa fa-thumbs-down"></i></button>
+<button class="btn-success" (click)="deleteQuote(true)">Delete</button>
+<button class="btn-primary" (click)="upvotes()"><fa-icon [icon]="faThumbsUp"></fa-icon></button>
+<button class="btn-danger" (click)="downvotes()"><fa-icon [icon]="faThumbsDown"></fa-icon></button>
 
 
 

@@ -1,10 +1,9 @@
-<p>Welcome to our awesome quotes</p>
-
 <ul *ngFor="let quote of quote; let i = index">
-   <li>{{quote.author}}
+   <li><p>Quote by:<br>{{quote.author}}</p>
+        <p>The quote:<br>{{quote.quote}}</p>
 
    </li>
-   <button (click)='toggleDetails(i)'>Show</button>
+   <button class="btn-primary" (click)='toggleDetails(i)'>Show More</button>
 
    <div>
        <app-quotedetails *ngIf="quote.showDescription"[quote]="quote" (isComplete) = 'deleteQuote($event,i)'></app-quotedetails>
