@@ -2,8 +2,8 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="card ">
-                <div class="card-body">
-                    <ul *ngFor="let quote of quote; let i = index">
+                <div *ngFor="let quote of quote; let i = index" class="mt-3">
+                    <ul >
                         <li><p class="card-title">Quote by:<br>{{quote.author}}</p>
                             <p class="card-text">The quote:<br>{{quote.quote}}</p>
 

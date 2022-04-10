@@ -43,6 +43,8 @@ export class QuotelistComponent implements OnInit {
     addQuote(quote:any){
       let arraysize = this.quote.length;
       quote.id =arraysize+1;
+      quote.author = (quote.author); 
+      quote.quote = (quote.quote)
       quote.completeDate =new Date(quote.completeDate)
       this.quote.push(quote)
 
