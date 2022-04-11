@@ -12,9 +12,9 @@ import { Quotes } from 'src/app/models/quotes';
 export class QuotelistComponent implements OnInit {
 
     quote: Quotes [] =[
-      new Quotes(0,'Gabby',"In three words I can sum up everything I've learned about life: it goes on.",new Date(2022,4,1),0,0),
-      new Quotes(1,'Ryan',"Try to be a rainbow in someone's cloud.",new Date(2021,4,5),5,0),
-      new Quotes(2,'Reynard','Work hard and SMART and success will follow you',new Date(2020,4,12),3,0)
+      new Quotes(0,'Gabby','Jodi Picoult',"You can always edit a bad page. You can't edit a blank page.",new Date(2022,4,1),0,0),
+      new Quotes(1,'Ryan','Maya Angelou',"There is no greater agony than bearing an untold story inside you.",new Date(2021,4,5),0,0),
+      new Quotes(2,'Reynard','Ray Bradbury','You fail only if you stop trying',new Date(2020,4,12),0,0)
     ];
 
     get sortedQuoty(){
@@ -50,29 +50,21 @@ export class QuotelistComponent implements OnInit {
 
     }
 
-    upvotes(i:number) {
-      this.quote[i].upvotes ++;
-    }
 
-    downvotes(i:number) {
-      this.quote[i].downvotes  ++;
-    }
+    first!:number;
+    last!:number;
+    count!:number;
 
-    firstNum!:number
-    lastNum!:number
-    counter!:number
+    highest(){
+      this.first = 0
+      this.last = 0
 
-    highestUpvote(){
-      this.firstNum = 0
-      this.lastNum = 0
-  
-      for(this.counter=0 ; this.counter < this.quote.length; this.counter++) {
-        this.lastNum = this.quote[this.counter].upvotes;
-        if(this.lastNum > this.firstNum){this.firstNum = this.lastNum}
+      for(this.count=0; this.count <this.quote.length; this.count++)
+      this.last =this.quote[this.count].upvotes;
+      if(this.last>this.first){this.first = this.last}
+    }    
+   
     
-      return  this.firstNum
-    }
-
  
 
   constructor() { }

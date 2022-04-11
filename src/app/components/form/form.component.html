@@ -7,7 +7,7 @@
         <div class="form-group">
   
             <label for="name">Enter Your Name:</label>
-            <input type="text" required class="form-control" id="name" [ngModel]="quoty.author" name="name"
+            <input type="text" required class="form-control" id="name" [ngModel]="quoty.name" name="name"
             #name="ngModel">
             <div [hidden] ="name.invalid || name.pristine" class="alert alert-danger">
                Your name is required.
@@ -25,10 +25,14 @@
         </div>
 
         <div class="form-group">
-            <label for="complete">Posted On:</label>
-            <input type='date' id="complete" required [ngModel]="quoty.completeDate" name="complete" #complete="ngModel">
   
+            <label for="description">Author of the quote</label>
+            <textarea class="form-control" id="quote" rows="4" required [ngModel]="quoty.author" name="quote" #quote="ngModel"></textarea>
+            <div [hidden] ="quote.invalid || quote.pristine" class="alert alert-danger">
+                Kindly Insert the quote writter.
+             </div>
         </div>
+
         <button type="submit" class="btn btn-success">Add Quote</button>
     </form>
   </div>

@@ -1,10 +1,10 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-6">
-            <div class="card ">
+        <div class="col-sm-8">
+            <div class="all-cards ">
                 <div *ngFor="let quote of quote; let i = index" class="mt-3">
                     <ul >
-                        <li><p class="card-title">Quote by:<br>{{quote.author}}</p>
+                        <li><p class="card-title">Written by:<br>{{quote.name}}</p>
                             <p class="card-text">The quote:<br>{{quote.quote}}</p>
 
                         </li>
@@ -18,7 +18,7 @@
             </div>
         </div>
 
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <div class="card ">
                     <div class="card-body">
                         <app-form (add)='addQuote ($event)'></app-form>
