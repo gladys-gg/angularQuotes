@@ -6,16 +6,18 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class DateCountPipe implements PipeTransform {
 
   transform(value: any): number {
-    let today:Date = new Date(); 
-    let todayWithNoTime:any = new Date(today.getFullYear(), today.getMonth(), today.getDate())
-    var dateDifference = Math.abs( todayWithNoTime - value) 
-    const secondsInDay = 86400; 
-    var dateDifferenceSeconds = dateDifference*0.001; 
-    var dateCounter = dateDifferenceSeconds/secondsInDay;
+    let dateCount: string='';
+    let today:any = new Date(); 
+    let difference = Math.abs( value - today) /1000;
+    let days = Math.floor(difference/86400); 
+    
 
-    if (dateCounter >= 1 &&  todayWithNoTime >value){
-      return dateCounter;
-    }else{
+    if (days > 1 ){
+      dateCount += Math.floor(days)+" days";
+      return difference;
+    }
+      else{(Math.floor(days)==0)
+      
       return 0;
     }
   }

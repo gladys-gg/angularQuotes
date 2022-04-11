@@ -14,7 +14,7 @@ export class FormComponent implements OnInit {
 
   addNewQuote (){
     this.add.emit(this.quoty);
-    
+    this.quoty= new Quotes (0,'','','',new Date(),0,0 )
   }
 
 

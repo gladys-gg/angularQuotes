@@ -7,14 +7,17 @@ export class HighlightDirective {
 
   constructor(private elem:ElementRef ) { 
 
-  }
-  @HostListener('click') onClicks(){
-    this.textDeco('green')
-  }
-  @HostListener('click') onDoubleClicks(){
-    this.textDeco('none')
-  }
-  private textDeco(action:string){
-    this.elem.nativeElement.style.color=action;
-  }
+  
+      this.elem.nativeElement.style.color='green';
+  
+  // @HostListener('click') onClicks(){
+  //   this.textDeco('green')
+  // }
+  // @HostListener('click') onDoubleClicks(){
+  //   this.textDeco('none')
+  // }
+  // private textDeco(action:string){
+  //   this.elem.nativeElement.style.color=action;
+  // }
+}
 }
