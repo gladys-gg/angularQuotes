@@ -59,10 +59,12 @@ export class QuotelistComponent implements OnInit {
       this.first = 0
       this.last = 0
 
-      for(this.count=0; this.count <this.quote.length; this.count++)
+      for(this.count=0; this.count <this.quote.length; this.count++){
       this.last =this.quote[this.count].upvotes;
       if(this.last>this.first){this.first = this.last}
-    }    
+    }
+    return this.first
+  }    
    
     
  
